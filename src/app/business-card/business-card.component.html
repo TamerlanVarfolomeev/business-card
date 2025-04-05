@@ -1,0 +1,31 @@
+<div class="card">
+    <div class="header">
+      <img src="assets/vladimir.png" alt="Фото" class="photo" />
+    </div>
+    <div class="info">
+      <h2>ПАЙМУРЗИН ВЛАДИМИР АЛЬБЕРТОВИЧ</h2>
+      <h3>ГЕНЕРАЛЬНЫЙ ДИРЕКТОР</h3>
+    </div>
+    <div class="call-section">
+        <div class="phone-container">
+          <button mat-icon-button (click)="copyPhoneNumber()" matTooltip="Скопировать номер">
+            <mat-icon>content_copy</mat-icon>
+          </button>
+          <span class="phone-number">{{ phone }}</span>
+        </div>
+        <button mat-raised-button class="save-contact" (click)="openPhoneContacts()">ПОЗВОНИТЬ</button>
+    </div>
+    <div class="contacts">
+      <a [href]="whatsappLink" class="whatsapp">
+        <img src="assets/whatsapp.png" alt="WhatsApp" />
+        НАПИСАТЬ В WHATSAPP <br /> {{ phone }}
+      </a>
+      <a [href]="telegramLink" class="telegram">
+        <img src="{{ 'assets/telegram.png' }}" alt="Telegram" />
+        НАПИСАТЬ В TELEGRAM <br /> {{ phone }}
+      </a>
+    </div>
+    <div class="footer">
+      <p>СДС-СТРОЙ</p>
+    </div>
+</div>
